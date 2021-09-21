@@ -49,7 +49,7 @@ $(function() {
     $('#form-login').submit(function(e) {
         e.preventDefault()
         $.ajax({
-                url: 'http://api-breakingnews-web.itheima.net/api/login',
+                url: '/api/login',
                 method: 'post',
                 //快速获取表单数据
                 data: $(this).serialize(),
@@ -61,7 +61,7 @@ $(function() {
                     // console.log(res.token);
                     //将成功登录得到的token字符串，保存到localstorage
                     localStorage.setItem('token', res.token)
-                        // location.href = '/index.html'
+                    location.href = '/index.html'
                 }
             }
 

@@ -23,11 +23,11 @@ function getUserInfo() {
             // headers: { Authorization: localStorage.getItem('token') || '' },
             success: function(res) {
                 if (res.status !== 0) {
-                    return console.log(res);
+                    return layer.msg('失败了');
                     // layui.layer.msg('获取失败'),
                 }
                 // layui.layer.msg('获取成功')
-                console.log(res);
+                // console.log(res);
                 //调用renderAvatar渲染用户头像
                 renderAvatar(res.data)
                     //不论成功还是失败，都调用complete函数
